@@ -19,9 +19,10 @@ public class Grid extends JButton implements ActionListener {
     public Grid(int idX,int idY) {
         this.gridIdX = idX;
         this.gridIdY = idY;
-        gridNum = new Random().nextInt(Data.MAX);
         this.setLayout(new BorderLayout());
         this.setBackground(Color.white);
+
+        gridNum = new Random().nextInt(Data.MAX);
         numText = new JLabel(String.valueOf(gridNum), JLabel.CENTER);
         if (gridNum == 0) {
             this.setEnabled(false);
